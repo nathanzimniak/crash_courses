@@ -91,8 +91,6 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.75rem;
-  height: 3.75rem;
   border-radius: 999px;
   border: 1px solid transparent;
   background: var(--bg-alt);
