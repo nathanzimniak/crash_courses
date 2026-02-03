@@ -2,7 +2,8 @@
 
 :root {
   color-scheme: dark;
-  --bg: #0f1115;
+  --bg-0: rgba(15, 17, 21, 1);
+  --bg-1: rgba(15, 17, 21, 0.8);
   --text: #e6e6e6;
   --muted-0: rgba(165, 173, 186, 1);
   --muted-1: rgba(165, 173, 186, 0.05);
@@ -38,7 +39,7 @@ body.theme-fortran {
 
 body {
   font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
-  background: var(--bg);
+  background: var(--bg-0);
   color: var(--text);
   min-height: 100vh;
   display: flex;
@@ -58,7 +59,7 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(15, 17, 21, 0.95);
+  background: var(--bg-1);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--muted-1);
   display: grid;
