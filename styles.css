@@ -198,7 +198,7 @@ a:hover {
 
 .side-nav a:hover,
 .side-nav a:focus-visible {
-  background: rgba(122, 162, 247, 0.16);
+  background: var(--accent-2);
   color: var(--accent-0);
 }
 
