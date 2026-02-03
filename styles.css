@@ -4,7 +4,8 @@
   color-scheme: dark;
   --bg: #0f1115;
   --text: #e6e6e6;
-  --muted: #a5adba;
+  --muted-0: rgba(165, 173, 186, 1)
+  --muted-1: rgba(165, 173, 186, 0.05)
   --accent-0: rgba(78, 152, 213, 1);
   --accent-1: rgba(78, 152, 213, 0.5);
   --accent-2: rgba(78, 152, 213, 0.05);
@@ -59,11 +60,11 @@ a:hover {
   z-index: 10;
   background: rgba(15, 17, 21, 0.95);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--muted-1);
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.2rem 2rem;
 }
 
 .header-left {
@@ -82,7 +83,7 @@ a:hover {
   align-items: center;
   gap: 0.5rem;
   font-weight: 500;
-  color: var(--muted);
+  color: var(--muted-0);
 }
 
 .header-nav .nav-icon {
@@ -133,7 +134,7 @@ a:hover {
 
 .page-content {
   flex: 1;
-  padding: 3rem 2rem;
+  padding: 3rem 3rem;
 }
 
 .hero {
@@ -148,7 +149,7 @@ a:hover {
 }
 
 .hero p {
-  color: var(--muted);
+  color: var(--muted-0);
   font-size: 1.1rem;
 }
 
@@ -220,7 +221,7 @@ a:hover {
 }
 
 .content p {
-  color: var(--muted);
+  color: var(--muted-0);
   line-height: 1.7;
 }
 
@@ -371,7 +372,7 @@ code {
   border-top: 1px solid var(--border);
   text-align: center;
   padding: 1.5rem 2rem;
-  color: var(--muted);
+  color: var(--muted-0);
 }
 
 @media (max-width: 900px) {
