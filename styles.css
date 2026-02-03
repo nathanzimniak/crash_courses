@@ -95,6 +95,19 @@ a:hover {
   font-weight: 600;
 }
 
+.btn-icon {
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  fill: currentColor;
+}
+
 .page-content {
   flex: 1;
   padding: 3rem 2rem;
