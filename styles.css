@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+
 :root {
   color-scheme: dark;
   --bg: #0f1115;
@@ -163,6 +165,13 @@ pre {
   border-radius: 12px;
   overflow-x: auto;
   color: #d5d5d5;
+  font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", monospace;
+}
+
+code {
+  font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
+    "Liberation Mono", "Courier New", monospace;
 }
 
 .site-footer {
