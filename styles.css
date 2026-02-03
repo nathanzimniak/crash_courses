@@ -182,6 +182,25 @@ a:hover {
   margin-bottom: 0.75rem;
 }
 
+.language-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.language-title .language-icon {
+  display: inline-flex;
+  width: 1.6rem;
+  height: 1.6rem;
+  color: var(--accent);
+}
+
+.language-title .language-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
+}
+
 .content h2 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
