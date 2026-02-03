@@ -160,11 +160,9 @@ a:hover {
 pre {
   margin: 1rem 0rem;
   padding: 1.25rem;
-  background: #0b0d12;
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow-x: auto;
-  color: #d5d5d5;
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
   font-size: 0.95rem;
@@ -174,6 +172,94 @@ code {
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
   font-size: 0.95em;
+}
+
+.code-block {
+  background: #0b0d12;
+  color: #d5d5d5;
+}
+
+.code-block .token-keyword {
+  font-weight: 600;
+}
+
+.code-block .token-function {
+  font-weight: 600;
+}
+
+.language-python {
+  background: #0b1021;
+  border-color: #2b3245;
+}
+
+.language-python .token-keyword {
+  color: #ff7b72;
+}
+
+.language-python .token-function {
+  color: #79c0ff;
+}
+
+.language-python .token-string {
+  color: #a5d6ff;
+}
+
+.language-python .token-variable {
+  color: #c9d1ff;
+}
+
+.language-python .token-operator {
+  color: #f2cc60;
+}
+
+.language-matlab {
+  background: #111a1a;
+  border-color: #243636;
+}
+
+.language-matlab .token-keyword {
+  color: #ffa657;
+}
+
+.language-matlab .token-function {
+  color: #7ee787;
+}
+
+.language-matlab .token-string {
+  color: #a5f3fc;
+}
+
+.language-matlab .token-variable {
+  color: #d1d5ff;
+}
+
+.language-matlab .token-operator {
+  color: #ffd580;
+}
+
+.language-fortran {
+  background: #1a121f;
+  border-color: #31203a;
+}
+
+.language-fortran .token-keyword {
+  color: #fca5a5;
+}
+
+.language-fortran .token-function {
+  color: #c4b5fd;
+}
+
+.language-fortran .token-string {
+  color: #f9a8d4;
+}
+
+.language-fortran .token-variable {
+  color: #e9d5ff;
+}
+
+.language-fortran .token-operator {
+  color: #fdba74;
 }
 
 .site-footer {
