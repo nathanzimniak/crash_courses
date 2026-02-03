@@ -211,6 +211,10 @@ a:hover {
   margin: 0px 50px 0px 0px;
 }
 
+.content article {
+  scroll-margin-top: 7rem;
+}
+
 .content h1 {
   font-size: 2rem;
   margin-bottom: 0.75rem;
