@@ -181,6 +181,18 @@ a:hover {
 .side-nav a {
   color: var(--text);
   font-weight: 500;
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 8px;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.side-nav a:hover,
+.side-nav a:focus-visible {
+  background: rgba(122, 162, 247, 0.16);
+  color: var(--accent);
+  transform: translateX(2px);
 }
 
 .content {
