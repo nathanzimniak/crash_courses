@@ -8,6 +8,7 @@
   --muted: #a5adba;
   --accent: #7aa2f7;
   --border: #2a2f3a;
+  --code-text: #f5b97f;
 }
 
 * {
@@ -164,13 +165,14 @@ pre {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow-x: auto;
-  color: #d5d5d5;
+  color: var(--code-text);
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
   font-size: 0.95rem;
 }
 
 code {
+  color: var(--code-text);
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
   font-size: 0.95em;
