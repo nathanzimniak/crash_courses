@@ -13,15 +13,15 @@
 }
 
 body.theme-python {
-  --accent: #4e98d5;
+  --accent-0: rgba(122, 162, 247, 1);
 }
 
 body.theme-matlab {
-  --accent: #f27c50;
+  --accent-1: #f27c50;
 }
 
 body.theme-fortran {
-  --accent: #af8bd2;
+  --accent-2: #af8bd2;
 }
 
 * {
