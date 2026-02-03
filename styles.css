@@ -231,7 +231,6 @@ a:hover {
 pre {
   margin: 1rem 0rem;
   padding: 1.25rem;
-  border: 1px solid var(--border);
   border-radius: 12px;
   overflow-x: auto;
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
@@ -302,7 +301,6 @@ code {
 
 .language-python {
   background: var(--accent-2);
-  border-color: var(--accent-1);
 }
 
 .language-python .token-keyword {
@@ -327,7 +325,6 @@ code {
 
 .language-matlab {
   background: #111a1a;
-  border-color: #243636;
 }
 
 .language-matlab .token-keyword {
@@ -352,7 +349,6 @@ code {
 
 .language-fortran {
   background: #1a121f;
-  border-color: #31203a;
 }
 
 .language-fortran .token-keyword {
