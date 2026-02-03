@@ -59,8 +59,23 @@ a:hover {
 }
 
 .header-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 500;
   color: var(--muted);
+}
+
+.header-nav .nav-icon {
+  display: inline-flex;
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.header-nav .nav-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: currentColor;
 }
 
 .header-nav a[aria-current="page"] {
