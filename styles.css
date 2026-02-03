@@ -8,20 +8,26 @@
   --muted: #a5adba;
   --accent-0: rgba(122, 162, 247, 1);
   --accent-1: rgba(122, 162, 247, 0.5);
-  --accent-1: rgba(122, 162, 247, 0.05);
+  --accent-2: rgba(122, 162, 247, 0.05);
   --border: #2a2f3a;
 }
 
 body.theme-python {
   --accent-0: rgba(122, 162, 247, 1);
+  --accent-1: rgba(122, 162, 247, 0.5);
+  --accent-2: rgba(122, 162, 247, 0.05);
 }
 
 body.theme-matlab {
-  --accent-1: #f27c50;
+  --accent-0: rgba(242, 124, 80, 1)
+  --accent-1: rgba(242, 124, 80, 0.5);
+  --accent-2: rgba(242, 124, 80, 0.05);
 }
 
 body.theme-fortran {
-  --accent-2: #af8bd2;
+  --accent-0: rgba(175, 139, 210, 1)
+  --accent-1: rgba(175, 139, 210, 0.5);
+  --accent-2: rgba(175, 139, 210, 0.05);
 }
 
 * {
