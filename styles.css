@@ -177,6 +177,49 @@ code {
 .code-block {
   background: #0b0d12;
   color: #d5d5d5;
+  position: relative;
+  padding-top: 2.75rem;
+}
+
+.copy-button {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: rgba(15, 17, 21, 0.8);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.copy-button svg {
+  width: 16px;
+  height: 16px;
+}
+
+.copy-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.copy-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.copy-button.is-copied {
+  border-color: #7ee787;
+  color: #7ee787;
+}
+
+.code-block code {
+  display: block;
 }
 
 .code-block .token-keyword {
