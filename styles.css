@@ -10,6 +10,18 @@
   --border: #2a2f3a;
 }
 
+body.theme-python {
+  --accent: #4e98d5;
+}
+
+body.theme-matlab {
+  --accent: #f27c50;
+}
+
+body.theme-fortran {
+  --accent: #af8bd2;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
