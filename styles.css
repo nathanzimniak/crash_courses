@@ -3,7 +3,6 @@
 :root {
   color-scheme: dark;
   --bg: #0f1115;
-  --bg-alt: #171a21;
   --text: #e6e6e6;
   --muted: #a5adba;
   --accent-0: rgba(78, 152, 213, 1);
@@ -113,9 +112,8 @@ a:hover {
   justify-content: center;
   border-radius: 999px;
   border: 1px solid transparent;
-  background: var(--bg-alt);
   color: var(--text);
-  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .icon-link svg {
@@ -125,9 +123,7 @@ a:hover {
 }
 
 .icon-link:hover {
-  border-color: var(--accent-0);
   color: var(--accent-0);
-  transform: translateY(-1px);
 }
 
 .icon-link:focus-visible {
