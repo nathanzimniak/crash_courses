@@ -75,22 +75,36 @@
 			<br>
 			MATLAB est principalement utilisé pour le calcul scientifique, le traitement du signal, la modélisation,
 			la simulation et la visualisation de données. Son paradigme fondamental repose sur l’algèbre linéaire :
-			le type de donnée par défaut est la matrice. Ainsi, un scalaire correspond à une matrice 1×1, un vecteur
-			à une matrice Nx1 ou 1×N, et une matrice générale à un tableau NxM. Cette conception implique que l’on 
-			programme avant tout des opérations sur des tableaux, plutôt que des itérations élémentaires.
+			le type de donnée par défaut est la matrice. Ainsi, un scalaire correspond à une matrice
+			<span class="inline-snippet"><code>1*1</code></span>, un vecteur à une matrice 
+			<span class="inline-snippet"><code>N*1</code></span> ou 
+			<span class="inline-snippet"><code>1*N</code></span>,
+			et une matrice générale à un tableau 
+			<span class="inline-snippet"><code>N*M</code></span>. Cette conception implique que l’on programme avant 
+			tout des opérations sur des tableaux, plutôt que des itérations élémentaires.
         </p>
       </article>
 
       <article id="section-1">
         <h2>Section 1</h2>
         <p>
-			MATLAB propose les opérateurs arithmétiques classiques : l’addition <span class="inline-snippet"><code>+</code></span>, la soustraction <span class="inline-snippet"><code>-</code></span>, la multiplication 
-			<span class="inline-snippet"><code>*</code></span>, la division à droite <span class="inline-snippet"><code>/</code></span>, la division à gauche <span class="inline-snippet"><code>\</code></span> et la puissance <span class="inline-snippet"><code>^</code></span>. 
-			Par défaut, ces opérateurs sont 
-			interprétés dans le cadre de l’algèbre linéaire. Ainsi, l’opérateur * correspond à une multiplication matricielle.
-			Lorsque l’on souhaite effectuer des opérations élément par élément, il est nécessaire d’utiliser l’opérateur 
-			de vectorisation . placé devant l’opérateur concerné : .*, ./, .\, .^ ou .'. Cette distinction est fondamentale 
-			en MATLAB, car * et .* n’ont pas la même signification.
+			MATLAB propose les opérateurs arithmétiques classiques : l’addition 
+			<span class="inline-snippet"><code>+</code></span>, la soustraction 
+			<span class="inline-snippet"><code>-</code></span>, la multiplication 
+			<span class="inline-snippet"><code>*</code></span>, la division à droite 
+			<span class="inline-snippet"><code>/</code></span>, la division à gauche 
+			<span class="inline-snippet"><code>\</code></span> et la puissance 
+			<span class="inline-snippet"><code>^</code></span>. 
+			Par défaut, ces opérateurs sont interprétés dans le cadre de l’algèbre linéaire. Par exemple, l’opérateur
+			<span class="inline-snippet"><code>*</code></span> correspond à une multiplication matricielle. Lorsque 
+			l’on souhaite effectuer des opérations élément par élément, il est nécessaire d’utiliser l’opérateur de vectorisation
+			<span class="inline-snippet"><code>.</code></span> placé devant l’opérateur concerné : 
+			<span class="inline-snippet"><code>.+</code></span>,
+			<span class="inline-snippet"><code>.*</code></span>,
+			<span class="inline-snippet"><code>./</code></span>,
+			<span class="inline-snippet"><code>.\</code></span>,
+			<span class="inline-snippet"><code>.^</code></span>,
+			<span class="inline-snippet"><code>.'</code></span>.
         </p>
         </p>
         <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
