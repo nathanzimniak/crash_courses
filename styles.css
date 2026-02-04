@@ -266,7 +266,7 @@ code {
   align-items: center;
   padding: 0.1rem 0.35rem;
   border-radius: 6px;
-  background: #0b0d12;
+  background: var(--accent-2);
   color: #c9d1d9;
 }
 
