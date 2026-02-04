@@ -256,8 +256,8 @@ code {
 }
 
 .code-block {
-  background: #0b0d12;
-  color: #d5d5d5;
+  background: #0d1117;
+  color: #c9d1d9;
   position: relative;
 }
 
@@ -310,76 +310,40 @@ code {
   font-weight: 600;
 }
 
-.language-python {
-  background: var(--accent-2);
+.language-python,
+.language-matlab,
+.language-fortran {
+  background: #0d1117;
 }
 
-.language-python .token-keyword {
+.language-python .token-keyword,
+.language-matlab .token-keyword,
+.language-fortran .token-keyword {
   color: #ff7b72;
 }
 
-.language-python .token-function {
-  color: #79c0ff;
+.language-python .token-function,
+.language-matlab .token-function,
+.language-fortran .token-function {
+  color: #d2a8ff;
 }
 
-.language-python .token-string {
+.language-python .token-string,
+.language-matlab .token-string,
+.language-fortran .token-string {
   color: #a5d6ff;
 }
 
-.language-python .token-variable {
-  color: #c9d1ff;
-}
-
-.language-python .token-operator {
-  color: #f2cc60;
-}
-
-.language-matlab {
-  background: var(--accent-2);
-}
-
-.language-matlab .token-keyword {
+.language-python .token-variable,
+.language-matlab .token-variable,
+.language-fortran .token-variable {
   color: #ffa657;
 }
 
-.language-matlab .token-function {
-  color: #7ee787;
-}
-
-.language-matlab .token-string {
-  color: #a5f3fc;
-}
-
-.language-matlab .token-variable {
-  color: #d1d5ff;
-}
-
-.language-matlab .token-operator {
-  color: #ffd580;
-}
-
-.language-fortran {
-  background: var(--accent-2);
-}
-
-.language-fortran .token-keyword {
-  color: #fca5a5;
-}
-
-.language-fortran .token-function {
-  color: #c4b5fd;
-}
-
-.language-fortran .token-string {
-  color: #f9a8d4;
-}
-
-.language-fortran .token-variable {
-  color: #e9d5ff;
-}
-
+.language-python .token-operator,
+.language-matlab .token-operator,
 .language-fortran .token-operator {
-  color: #fdba74;
+  color: #79c0ff;
 }
 
 .site-footer {
