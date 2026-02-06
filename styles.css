@@ -204,6 +204,29 @@ a:hover {
 
 .side-nav summary {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+}
+
+.side-nav summary::before {
+  content: "▶";
+  font-size: 0.7rem;
+  color: var(--accent-1);
+  transition: transform 0.2s ease;
+}
+
+.side-nav details[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.side-nav summary::-webkit-details-marker {
+  display: none;
+}
+
+.side-nav summary::marker {
+  content: "";
 }
 
 .side-nav summary span {
