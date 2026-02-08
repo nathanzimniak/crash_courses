@@ -220,7 +220,7 @@ a:hover {
   position: relative;
   color: var(--text);
   font-weight: 500;
-  padding: 0.4rem 1.6rem 0.4rem 0.5rem;
+  padding: 0.4rem 0.5rem 0.4rem 1.6rem;
   border-radius: 8px;
   transition: background-color 0.2s ease, color 0.2s ease,
     transform 0.2s ease;
@@ -229,7 +229,7 @@ a:hover {
 .side-nav summary span::before {
   content: "▶";
   position: absolute;
-  right: 0.5rem;
+  left: 0.5rem;
   top: 50%;
   transform: translateY(-50%);
   font-size: 0.7rem;
