@@ -55,6 +55,10 @@ a:hover {
   color: var(--accent-0);
 }
 
+.accent-text {
+  color: var(--accent-0);
+}
+
 .site-header {
   position: sticky;
   top: 0;
