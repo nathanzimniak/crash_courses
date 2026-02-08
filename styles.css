@@ -302,8 +302,8 @@ a:hover {
 }
 
 .section-block > :not(h2):not(section) {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .content h1 {
