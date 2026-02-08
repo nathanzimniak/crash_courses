@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap");
 
 :root {
   color-scheme: dark;
@@ -38,7 +38,7 @@ body.theme-fortran {
 }
 
 body {
-  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-family: "Montserrat", "Segoe UI", system-ui, -apple-system, sans-serif;
   background: var(--bg-0);
   color: var(--text);
   min-height: 100vh;
