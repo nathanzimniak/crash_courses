@@ -220,16 +220,16 @@ a:hover {
   position: relative;
   color: var(--text);
   font-weight: 500;
-  padding: 0.4rem 0.5rem 0.4rem 1.6rem;
+  padding: 0.4rem 1.6rem 0.4rem 0.5rem;
   border-radius: 8px;
   transition: background-color 0.2s ease, color 0.2s ease,
     transform 0.2s ease;
 }
 
-.side-nav summary span::before {
+.side-nav summary span::after {
   content: "";
   position: absolute;
-  left: 0.6rem;
+  right: 0.6rem;
   top: 50%;
   width: 0;
   height: 0;
@@ -240,7 +240,7 @@ a:hover {
   transition: transform 0.2s ease, border-left-color 0.2s ease;
 }
 
-.side-nav details[open] summary span::before {
+.side-nav details[open] summary span::after {
   transform: translateY(-50%) rotate(90deg);
 }
 
@@ -250,8 +250,8 @@ a:hover {
   color: var(--accent-0);
 }
 
-.side-nav summary:hover span::before,
-.side-nav summary:focus-visible span::before {
+.side-nav summary:hover span::after,
+.side-nav summary:focus-visible span::after {
   border-left-color: var(--accent-0);
 }
 
