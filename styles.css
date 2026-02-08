@@ -360,6 +360,12 @@ code {
   background: #0b0d12;
   color: #c9d1d9;
   position: relative;
+  padding: 1.5rem;
+}
+
+.section-block > .code-block {
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .inline-snippet {
