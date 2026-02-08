@@ -231,17 +231,25 @@ a:hover {
   position: absolute;
   right: 0.6rem;
   top: 50%;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 8px solid var(--accent-1);
   transform: translateY(-50%);
-  transition: transform 0.2s ease, border-left-color 0.2s ease;
+  color: var(--accent-1);
+  width: 0.6rem;
+  height: 0.6rem;
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M4 2l4 4-4 4' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+  -webkit-mask-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M4 2l4 4-4 4' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>\");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .side-nav details[open] summary span::after {
-  transform: translateY(-50%) rotate(90deg);
+  mask-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>");
+  -webkit-mask-image: url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'><path d='M2 4l4 4 4-4' fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2'/></svg>\");
 }
 
 .side-nav summary:hover span,
@@ -252,7 +260,7 @@ a:hover {
 
 .side-nav summary:hover span::after,
 .side-nav summary:focus-visible span::after {
-  border-left-color: var(--accent-0);
+  color: var(--accent-0);
 }
 
 .side-nav a {
