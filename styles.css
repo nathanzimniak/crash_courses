@@ -205,6 +205,10 @@ a:hover {
 .side-nav summary {
   cursor: pointer;
   list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 .side-nav summary::-webkit-details-marker {
