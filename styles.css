@@ -359,6 +359,10 @@ code {
   height: 24px;
 }
 
+.section-spacing--main {
+  height: 40px;
+}
+
 .copy-button {
   position: absolute;
   top: 0.65rem;
