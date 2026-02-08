@@ -227,21 +227,18 @@ a:hover {
 }
 
 .side-nav summary span::after {
-  content: "";
+  content: "→";
   position: absolute;
   right: 0.6rem;
   top: 50%;
-  width: 0;
-  height: 0;
-  border-top: 5px solid transparent;
-  border-bottom: 5px solid transparent;
-  border-left: 8px solid var(--accent-1);
   transform: translateY(-50%);
-  transition: transform 0.2s ease, border-left-color 0.2s ease;
+  color: var(--accent-1);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .side-nav details[open] summary span::after {
-  transform: translateY(-50%) rotate(90deg);
+  content: "↓";
 }
 
 .side-nav summary:hover span,
@@ -252,7 +249,7 @@ a:hover {
 
 .side-nav summary:hover span::after,
 .side-nav summary:focus-visible span::after {
-  border-left-color: var(--accent-0);
+  color: var(--accent-0);
 }
 
 .side-nav a {
