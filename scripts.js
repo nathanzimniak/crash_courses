@@ -82,6 +82,12 @@ document.addEventListener("DOMContentLoaded", () => {
         link.removeAttribute("aria-current");
       }
     });
+
+    const parentDetails = activeLink?.closest("details");
+    const allDetails = Array.from(sideNav.querySelectorAll("details"));
+    allDetails.forEach((details) => {
+      details.open = details === parentDetails;
+    });
   };
 
   if (window.location.hash) {
