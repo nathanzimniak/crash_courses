@@ -242,10 +242,10 @@
 			<p>
 			  Au-delà de ces règles de nommage, la clarté du code repose également sur une bonne utilisation des commentaires. Les commentaires sur une seule
 			  ligne débutent par le caractère 
-			  <span class="inline-snippet language-matlab"><code><span class="token-operator">%</span></code></span>, tout ce qui suit étant ignoré jusqu’à la fin de la ligne.
+			  token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">%</span></code></span>, tout ce qui suit étant ignoré jusqu’à la fin de la ligne.
 			  Il est également possible d’insérer des commentaires multilignes à l’aide des délimiteurs
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">%{</span></code></span> et
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">%}</span></code></span>.
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">%{</span></code></span> et
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">%}</span></code></span>.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -259,7 +259,7 @@
 <span class="token-comment">%}</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               La fin d’une instruction MATLAB est marquée par un retour à la ligne. Lorsqu’une ligne se termine
-              par un <span class="accent-text">point-virgule</span> <span class="inline-snippet language-matlab"><code><span class="token-operator">;</span></code></span>,
+              par un <span class="accent-text">point-virgule</span> <span class="inline-snippet language-matlab"><code><span class="token-txt">;</span></code></span>,
               MATLAB exécute l’instruction sans afficher le résultat dans la fenêtre de commande. En l’absence de
               point-virgule, le résultat est affiché automatiquement. L’usage systématique du point-virgule est
               recommandé dans les scripts afin d’éviter un affichage excessif et d’améliorer les performances.
@@ -286,7 +286,7 @@
               avertissement. Cette flexibilité accélère l'écriture du code, mais peut introduire des erreurs logiques
               si les changements de type ne sont pas maîtrisés. Il est possible d’inspecter le type d’une
               variable à l’aide de la fonction
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">class()</span></code></span>.
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">class()</span></code></span>.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -302,8 +302,8 @@
               Les noms de variables doivent respecter les règles suivantes : (1) ils doivent commencer par une
               lettre, (2) ils peuvent contenir des lettres, des chiffres et le caractère _, (3) ils ne peuvent
               pas correspondre à un mot réservé du langage (comme
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">if</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">for</span></code></span>, etc.).
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">if</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">for</span></code></span>, etc.).
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -317,11 +317,11 @@
               le workspace. Le workspace permet d’inspecter interactivement les valeurs, dimensions et types des
               variables, ce qui constitue un outil essentiel pour le débogage et l’exploration des données. Il est
               possible d’afficher les variables présentes avec la commande
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">who</span></code></span>, de supprimer une
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">who</span></code></span>, de supprimer une
               variable spécifique avec
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">clear [nom de la variable]</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">clear [nom de la variable]</span></code></span>,
               ou d’effacer l’ensemble du workspace avec
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">clear</span></code></span>.
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">clear</span></code></span>.
             </p>
           </section>
 
@@ -359,8 +359,8 @@
 <span class="token-function">class</span>(<span class="token-variable">b</span>)</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Les valeurs logiques sont représentées par le type logical, qui ne peut prendre que deux valeurs :
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">true</span></code></span> ou
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">false</span></code></span>.
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">true</span></code></span> ou
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">false</span></code></span>.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -370,9 +370,9 @@
 <span class="token-variable">estValide</span> <span class="token-operator">=</span> <span class="token-logical">true</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               MATLAB propose deux représentations distinctes pour le texte. Les character arrays utilisent des
-              apostrophes simples <span class="inline-snippet language-matlab"><code><span class="token-operator">’</span></code></span>
+              apostrophes simples token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">’</span></code></span>
               tandis que les strings, introduites plus récemment, utilisent des guillemets doubles
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">"</span></code></span>. Les strings offrent
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">"</span></code></span>. Les strings offrent
               une manipulation plus moderne et plus flexible du texte (concaténation, comparaison, tableaux de
               chaînes), tandis que les character arrays restent largement présents pour des raisons de
               compatibilité.
@@ -393,14 +393,14 @@
             <p>
               La matrice est la structure de données fondamentale de MATLAB. Toute donnée numérique est
               représentée sous forme matricielle. Un vecteur ligne est une matrice de taille
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">1×N</span></code></span>, tandis qu’un vecteur
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">1×N</span></code></span>, tandis qu’un vecteur
               colonne est une matrice de taille
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">N×1</span></code></span>. Les scalaires eux-mêmes
-              sont représentés comme des matrices <span class="inline-snippet language-matlab"><code><span class="token-operator">1×1</span></code></span>. Cette unification permet d’appliquer les mêmes
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">N×1</span></code></span>. Les scalaires eux-mêmes
+              sont représentés comme des matrices token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">1×1</span></code></span>. Cette unification permet d’appliquer les mêmes
               opérations matricielles aux scalaires, vecteurs et matrices, ce qui constitue un principe
               fondamental du langage. Une matrice se crée à l’aide de crochets, avec les lignes séparées par des
-              points-virgules <span class="inline-snippet language-matlab"><code><span class="token-operator">;</span></code></span> et les
-              colonnes par des espaces ou des virgules <span class="inline-snippet language-matlab"><code><span class="token-operator">,</span></code></span>.
+              points-virgules token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">;</span></code></span> et les
+              colonnes par des espaces ou des virgules token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">,</span></code></span>.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -452,14 +452,14 @@
             <h3>Opérations</h3>
             <p>
               Les opérateurs arithmétiques standards sont l’addition
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">+</span></code></span>, la soustraction
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">-</span></code></span>, la multiplication
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">*</span></code></span>, la division à droite
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">/</span></code></span> et la division à gauche
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">\</span></code></span>. Lorsqu’ils sont
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">+</span></code></span>, la soustraction
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">-</span></code></span>, la multiplication
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">*</span></code></span>, la division à droite
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">/</span></code></span> et la division à gauche
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">\</span></code></span>. Lorsqu’ils sont
               appliqués à des matrices, ils correspondent aux opérations matricielles classiques. Pour
               effectuer des opérations élément par élément, il est nécessaire d’utiliser un point
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">.</span></code></span> devant l’opérateur. Cette
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l’opérateur. Cette
               notation indique que l’opération est appliquée indépendamment à chaque élément.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
@@ -471,15 +471,15 @@
 <span class="token-variable">produitMat</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">*</span> <span class="token-variable">B</span>;
 <span class="token-variable">produitElement</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">.*</span> <span class="token-variable">B</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
-              Les opérateurs de comparaison sont l’égalité <span class="inline-snippet language-matlab"><code><span class="token-operator">==</span></code></span>, la non-égalité
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">~=</span></code></span>, l’infériorité
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">&lt;</span></code></span> ou
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">&lt;=</span></code></span>, et la supériorité
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">></span></code></span> ou
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">>=</span></code></span>. Ils permettent de
+              Les opérateurs de comparaison sont l’égalité token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">==</span></code></span>, la non-égalité
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">~=</span></code></span>, l’infériorité
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">&lt;</span></code></span> ou
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">&lt;=</span></code></span>, et la supériorité
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">></span></code></span> ou
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">>=</span></code></span>. Ils permettent de
               comparer des valeurs ou des matrices et renvoient un résultat logique
-              (<span class="inline-snippet language-matlab"><code><span class="token-operator">true</span></code></span> ou
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">false</span></code></span>) pour chaque élément.
+              (token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">true</span></code></span> ou
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">false</span></code></span>) pour chaque élément.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -488,9 +488,9 @@
             </button><code><span class="token-variable">notes</span> <span class="token-operator">=</span> [<span class="token-number">12</span> <span class="token-number">8</span> <span class="token-number">15</span>];
 <span class="token-variable">admis</span> <span class="token-operator">=</span> <span class="token-variable">notes</span> <span class="token-operator">>=</span> <span class="token-number">10</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
-              Les opérateurs logiques sont le ET <span class="inline-snippet language-matlab"><code><span class="token-operator">&</span></code></span>, le OU
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">|</span></code></span> et le NON
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">~</span></code></span>. Ils permettent de combiner
+              Les opérateurs logiques sont le ET token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">&</span></code></span>, le OU
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">|</span></code></span> et le NON
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">~</span></code></span>. Ils permettent de combiner
               ou d’inverser des conditions logiques, notamment dans les expressions conditionnelles.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
@@ -509,7 +509,7 @@
             <p>
               Les structures conditionnelles permettent d’exécuter différents blocs d’instructions selon qu’une
               condition logique est vérifiée ou non. La structure principale est
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">if … elseif … else … end</span></code></span>.
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">if … elseif … else … end</span></code></span>.
               La condition évaluée doit produire une valeur logique. Lorsque la condition est vraie, le bloc
               correspondant est exécuté, sinon MATLAB passe au test suivant.
             </p>
@@ -527,7 +527,7 @@
 <span class="token-keyword">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Pour des tests simples, il est également possible d’utiliser la structure
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">switch … case … otherwise</span></code></span>.
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">switch … case … otherwise</span></code></span>.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -556,7 +556,7 @@
   <span class="token-variable">somme</span> <span class="token-operator">=</span> <span class="token-variable">somme</span> <span class="token-operator">+</span> <span class="token-variable">i</span>;
 <span class="token-keyword">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
-              La boucle <span class="inline-snippet language-matlab"><code><span class="token-operator">while</span></code></span> est utilisée lorsque la répétition dépend d’une condition logique.
+              La boucle token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">while</span></code></span> est utilisée lorsque la répétition dépend d’une condition logique.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -568,8 +568,8 @@
 <span class="token-keyword">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               MATLAB fournit également les instructions
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">break</span></code></span> et
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">continue</span></code></span>, qui permettent
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">break</span></code></span> et
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">continue</span></code></span>, qui permettent
               respectivement d’interrompre une boucle ou de passer directement à l’itération suivante.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
@@ -617,11 +617,11 @@
             <p>
               MATLAB fournit un large ensemble de fonctions intégrées couvrant notamment le calcul numérique,
               l’algèbre linéaire, la manipulation de matrices et la visualisation, par exemple
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">sin()</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">cos()</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">mean()</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">size()</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-operator">plot()</span></code></span> … Ces fonctions sont
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">sin()</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">cos()</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">mean()</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">size()</span></code></span>,
+              token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">plot()</span></code></span> … Ces fonctions sont
               disponibles immédiatement après l’installation du logiciel et ne nécessitent aucune toolbox
               supplémentaire.
             </p>
@@ -653,7 +653,7 @@
               Une toolbox est reconnue automatiquement par MATLAB dès lors qu’elle est installée et présente
               dans le chemin. Aucune instruction particulière n’est nécessaire pour l’importer : ses fonctions
               deviennent directement accessibles. Il est possible de vérifier les toolboxes installées à l’aide
-              de la commande <span class="inline-snippet language-matlab"><code><span class="token-operator">ver</span></code></span>.
+              de la commande token-txt<span class="inline-snippet language-matlab"><code><span class="token-txt">ver</span></code></span>.
             </p>
             <p>
               Parmi les toolboxes les plus fréquemment utilisées, on trouve notamment Signal Processing Toolbox
