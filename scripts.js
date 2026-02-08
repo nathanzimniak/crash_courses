@@ -84,9 +84,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const parentDetails = activeLink?.closest("details");
-    if (parentDetails) {
-      parentDetails.open = true;
-    }
+    const allDetails = Array.from(sideNav.querySelectorAll("details"));
+    allDetails.forEach((details) => {
+      details.open = details === parentDetails;
+    });
   };
 
   if (window.location.hash) {
