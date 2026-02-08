@@ -227,14 +227,17 @@ a:hover {
 }
 
 .side-nav summary span::before {
-  content: "▶";
+  content: "";
   position: absolute;
-  left: 0.5rem;
+  left: 0.6rem;
   top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 8px solid var(--accent-1);
   transform: translateY(-50%);
-  font-size: 0.7rem;
-  color: var(--accent-1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, border-left-color 0.2s ease;
 }
 
 .side-nav details[open] summary span::before {
@@ -245,6 +248,11 @@ a:hover {
 .side-nav summary:focus-visible span {
   background: var(--accent-2);
   color: var(--accent-0);
+}
+
+.side-nav summary:hover span::before,
+.side-nav summary:focus-visible span::before {
+  border-left-color: var(--accent-0);
 }
 
 .side-nav a {
