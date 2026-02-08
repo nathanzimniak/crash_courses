@@ -321,6 +321,10 @@ a:hover {
   margin-bottom: 0.8rem;
 }
 
+.content section p {
+  text-align: justify;
+}
+
 .content p:last-child {
   margin-bottom: 0;
 }
