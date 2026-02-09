@@ -683,42 +683,44 @@
           <section class="section-block" id="visualisation">
             <h3>Visualisation</h3>
             <p>
-              La visualisation est un axe majeur de MATLAB : l'environnement intègre un moteur graphique
-              complet et des fonctions natives dédiées, ce qui facilite l'exploration rapide de résultats
-              numériques et la validation d'hypothèses. Les fonctions graphiques produisent des figures
-              interactives et exploitent un modèle de rendu cohérent basé sur des objets (axes, courbes, surfaces).
+
+			  La visualisation est l’un des piliers fondamentaux de MATLAB. L’environnement intègre un moteur graphique performant et un large éventail de fonctions natives,
+			  qui permettent d’explorer rapidement des résultats numériques, de mettre en évidence des tendances et de valider visuellement des hypothèses.
+			  Cette capacité de représentation immédiate des données constitue un atout majeur pour l’analyse scientifique et l’ingénierie.
             </p>
             <p>
-              <span class="accent-text">Plots 1D</span> : un plot 1D représente une variable <span class="accent-text">y</span> en fonction d'une
-              abscisse <span class="accent-text">x</span>. La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">plot(x, y)</span></code></span> trace une courbe
-              cartésienne classique.
+
+			  On distingue plusieurs grandes familles de graphiques. Les <span class="accent-text">plots 1D</span> décrivent la relation entre une variable dépendante
+			  <span class="accent-text">y</span> et une variable indépendante <span class="accent-text">x</span> :
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">y(x)</span></code></span>.
+			  La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">plot(x, y)</span></code></span> produit une courbe cartésienne classique.
+			  Lorsque les données couvrent plusieurs ordres de grandeur, MATLAB propose des axes logarithmiques via 
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">loglog(x, y)</span></code></span>,
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">semilogx(x, y)</span></code></span> ou
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">semilogy(x, y)</span></code></span>.
+			  Pour des représentations en coordonnées polaires, on utilise <span class="inline-snippet language-matlab"><code><span class="token-txt">polar(theta, r)</span></code></span>.
+			  Les données discrètes peuvent être visualisées à l’aide de diagrammes en barres
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">bar(x, y)</span></code></span>, ou de nuages de points
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">scatter(x, y)</span></code></span>,
+			  particulièrement utiles pour analyser la dispersion ou la corrélation entre variables.
             </p>
-            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
-              </svg>
-            </button><code><span class="token-comment">% Plot 1D : y en fonction de x</span>
-<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">0</span>, <span class="token-number">2</span><span class="token-operator">*</span><span class="token-variable">pi</span>, <span class="token-number">200</span>);
-<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">x</span>);
-<span class="token-function">plot</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+			[EXEMPLE CODE]
             <p>
-              <span class="accent-text">Plots 2D</span> : un plot 2D représente <span class="accent-text">x</span> et <span class="accent-text">y</span> dans un plan, avec une
-              valeur <span class="accent-text">z</span> codée par une échelle de couleur. Les fonctions comme
-              <span class="inline-snippet language-matlab"><code><span class="token-txt">scatter</span></code></span> ou <span class="inline-snippet language-matlab"><code><span class="token-txt">imagesc</span></code></span> permettent d'associer
-              une colorbar aux valeurs de <span class="accent-text">z</span>.
+			  MATLAB offre également des <span class="accent-text">plots 2D</span>, dans lesquels deux variables <span class="accent-text">x</span> et <span class="accent-text">y</span>
+			  définissent le plan, tandis qu’une troisième grandeur <span class="accent-text">z</span> est codée par une échelle de couleurs :
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">z(x, y)</span></code></span>. Ce formalisme correspond typiquement à
+			  l’affichage de champs scalaires, d’images ou de données spatialisées.
+			  La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">scatter(x, y, z)</span></code></span> permet de générer des nuages de
+			  points colorés, tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">imagesc(x, y, z)</span></code></span> affiche directement
+			  une matrice sous forme de carte de couleurs. D’autres fonctions, telles que
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">pcolor(x, y, z)</span></code></span>,
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">contour(x, y, z)</span></code></span> ou
+			  <span class="inline-snippet language-matlab"><code><span class="token-txt">contourf(x, y, z)</span></code></span>, offrent des représentations complémentaires
+			  (cartes colorées ou courbes de niveau).
+			  Dans tous les cas, l’ajout d’une <span class="accent-text">colorbar</span> permet d’établir la correspondance entre couleurs et valeurs numériques de
+			  <span class="accent-text">z</span>, facilitant l’interprétation visuelle.
             </p>
-            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
-              </svg>
-            </button><code><span class="token-comment">% Plot 2D : z codé par la couleur</span>
-<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">-2</span>, <span class="token-number">2</span>, <span class="token-number">80</span>);
-<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">-2</span>, <span class="token-number">2</span>, <span class="token-number">80</span>);
-<span class="token-operator">[</span><span class="token-variable">X</span><span class="token-operator">,</span> <span class="token-variable">Y</span><span class="token-operator">]</span> <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
-<span class="token-variable">Z</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">X</span>) <span class="token-operator">.*</span> <span class="token-function">cos</span>(<span class="token-variable">Y</span>);
-<span class="token-function">imagesc</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>, <span class="token-variable">Z</span>);
-<span class="token-function">axis</span>(<span class="token-string">"xy"</span>);
-<span class="token-function">colorbar</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+			[EXEMPLE CODE]
             <p>
               <span class="accent-text">Plots 3D</span> : un plot 3D correspond à un triplet <span class="accent-text">x, y, z</span> et
               représente une trajectoire dans l'espace. La fonction
