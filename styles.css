@@ -498,6 +498,7 @@ code {
   text-align: center;
   padding: 1.5rem 2rem;
   color: var(--muted-0);
+  font-size: 0.8rem;
 }
 
 @media (max-width: 900px) {
