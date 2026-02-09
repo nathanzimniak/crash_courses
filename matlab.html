@@ -481,7 +481,18 @@
 			  un point <span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l'opérateur : cette notation
 			  précise que l'opération est réalisée indépendamment sur chaque composant.
             </p>
-			[INSÉRER EXEMPLE CODE]
+				<pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Multiplication matricielle (produit classique)</span>
+<span class="token-variable">A</span> <span class="token-operator">=</span> [<span class="token-number">1</span> <span class="token-number">2</span>; <span class="token-number">3</span> <span class="token-number">4</span>];
+<span class="token-variable">B</span> <span class="token-operator">=</span> [<span class="token-number">5</span> <span class="token-number">6</span>; <span class="token-number">7</span> <span class="token-number">8</span>];
+<span class="token-variable">C</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">*</span> <span class="token-variable">B</span>;
+
+<span class="token-comment">% Opérations élément par élément</span>
+<span class="token-variable">D</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">.*</span> <span class="token-variable">B</span>;
+<span class="token-variable">E</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">./</span> <span class="token-number">2</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Les <span class="accent-text">opérateurs de comparaison</span> sont l'égalité <span class="inline-snippet language-matlab"><code><span class="token-txt">==</span></code></span>, la non-égalité
               <span class="inline-snippet language-matlab"><code><span class="token-txt">~=</span></code></span>, l'infériorité
@@ -493,14 +504,35 @@
               (<span class="inline-snippet language-matlab"><code><span class="token-txt">true</span></code></span> ou
               <span class="inline-snippet language-matlab"><code><span class="token-txt">false</span></code></span>) pour chaque élément.
             </p>
-			[INSÉRER EXEMPLE CODE]
+				<pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Comparaison de scalaires</span>
+<span class="token-variable">estEgal</span> <span class="token-operator">=</span> <span class="token-variable">a</span> <span class="token-operator">==</span> <span class="token-variable">b</span>;
+<span class="token-variable">estDifferent</span> <span class="token-operator">=</span> <span class="token-variable">a</span> <span class="token-operator">~=</span> <span class="token-variable">b</span>;
+
+<span class="token-comment">% Comparaison élément par élément dans un vecteur</span>
+<span class="token-variable">notesOk</span> <span class="token-operator">=</span> <span class="token-variable">notes</span> <span class="token-operator">>=</span> <span class="token-number">10</span>;
+
+<span class="token-comment">% Test sur une matrice</span>
+<span class="token-variable">positifs</span> <span class="token-operator">=</span> <span class="token-variable">M</span> <span class="token-operator">></span> <span class="token-number">0</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Les <span class="accent-text">opérateurs logiques</span> sont le ET <span class="inline-snippet language-matlab"><code><span class="token-txt">&</span></code></span>, le OU
               <span class="inline-snippet language-matlab"><code><span class="token-txt">|</span></code></span> et le NON
               <span class="inline-snippet language-matlab"><code><span class="token-txt">~</span></code></span>. Ils permettent de combiner
               ou d'inverser des conditions logiques, notamment dans les expressions conditionnelles.
             </p>
-			[INSÉRER EXEMPLE CODE]
+				<pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Combinaison de conditions</span>
+<span class="token-variable">admis</span> <span class="token-operator">=</span> <span class="token-variable">note</span> <span class="token-operator">>=</span> <span class="token-number">10</span> <span class="token-operator">&</span> <span class="token-variable">presence</span> <span class="token-operator">==</span> <span class="token-logical">true</span>;
+<span class="token-variable">eligible</span> <span class="token-operator">=</span> <span class="token-variable">note</span> <span class="token-operator">>=</span> <span class="token-number">12</span> <span class="token-operator">|</span> <span class="token-variable">bonus</span> <span class="token-operator">></span> <span class="token-number">0</span>;
+
+<span class="token-comment">% Inversion logique</span>
+<span class="token-variable">nonValide</span> <span class="token-operator">=</span> <span class="token-operator">~</span><span class="token-variable">estValide</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
 
           <div class="section-spacing" aria-hidden="true"></div>
@@ -518,7 +550,28 @@
   			  Chaque <span class="inline-snippet language-matlab"><code><span class="token-txt">case</span></code></span> correspond à une valeur spécifique,
 			  tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">otherwise</span></code></span> joue le rôle de cas par défaut.
             </p>
-			[INSÉRER EXEMPLE CODE]
+				<pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Structure if / elseif / else</span>
+<span class="token-txt">if</span> <span class="token-variable">note</span> <span class="token-operator">>=</span> <span class="token-number">16</span>
+  <span class="token-variable">mention</span> <span class="token-operator">=</span> <span class="token-string">"Très bien"</span>;
+<span class="token-txt">elseif</span> <span class="token-variable">note</span> <span class="token-operator">>=</span> <span class="token-number">12</span>
+  <span class="token-variable">mention</span> <span class="token-operator">=</span> <span class="token-string">"Bien"</span>;
+<span class="token-txt">else</span>
+  <span class="token-variable">mention</span> <span class="token-operator">=</span> <span class="token-string">"Passable"</span>;
+<span class="token-txt">end</span>
+
+<span class="token-comment">% Structure switch / case</span>
+<span class="token-txt">switch</span> <span class="token-variable">couleur</span>
+  <span class="token-txt">case</span> <span class="token-string">"rouge"</span>
+    <span class="token-variable">code</span> <span class="token-operator">=</span> <span class="token-number">1</span>;
+  <span class="token-txt">case</span> <span class="token-string">"vert"</span>
+    <span class="token-variable">code</span> <span class="token-operator">=</span> <span class="token-number">2</span>;
+  <span class="token-txt">otherwise</span>
+    <span class="token-variable">code</span> <span class="token-operator">=</span> <span class="token-number">0</span>;
+<span class="token-txt">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
 			  On distingue également les <span class="accent-text">boucles</span>, qui permettent de répéter un bloc d'instructions soit pour un nombre fixé d'itérations, soit tant
 			  qu'une condition logique est vérifiée. La structure <span class="inline-snippet language-matlab"><code><span class="token-txt">for</span></code></span> est employée lorsque
@@ -528,7 +581,27 @@
               <span class="inline-snippet language-matlab"><code><span class="token-txt">continue</span></code></span>, qui permettent
               respectivement d'interrompre une boucle ou de passer directement à l'itération suivante.
             </p>
-			[INSÉRER EXEMPLE CODE]
+				<pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Boucle for</span>
+<span class="token-variable">somme</span> <span class="token-operator">=</span> <span class="token-number">0</span>;
+<span class="token-txt">for</span> <span class="token-variable">k</span> <span class="token-operator">=</span> <span class="token-number">1</span>:<span class="token-number">5</span>
+  <span class="token-variable">somme</span> <span class="token-operator">=</span> <span class="token-variable">somme</span> <span class="token-operator">+</span> <span class="token-variable">k</span>;
+<span class="token-txt">end</span>
+
+<span class="token-comment">% Boucle while avec break et continue</span>
+<span class="token-variable">i</span> <span class="token-operator">=</span> <span class="token-number">0</span>;
+<span class="token-txt">while</span> <span class="token-variable">i</span> <span class="token-operator">&lt;</span> <span class="token-number">10</span>
+  <span class="token-variable">i</span> <span class="token-operator">=</span> <span class="token-variable">i</span> <span class="token-operator">+</span> <span class="token-number">1</span>;
+  <span class="token-txt">if</span> <span class="token-function">mod</span>(<span class="token-variable">i</span>, <span class="token-number">2</span>) <span class="token-operator">==</span> <span class="token-number">0</span>
+    <span class="token-txt">continue</span>;
+  <span class="token-txt">end</span>
+  <span class="token-txt">if</span> <span class="token-variable">i</span> <span class="token-operator">></span> <span class="token-number">7</span>
+    <span class="token-txt">break</span>;
+  <span class="token-txt">end</span>
+<span class="token-txt">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               MATLAB fournit également les instructions
               <span class="inline-snippet language-matlab"><code><span class="token-txt">break</span></code></span> et
@@ -549,7 +622,18 @@
 			  qui définissent rapidement de petites fonctions sans fichier séparé. Elles sont particulièrement utiles pour des calculs simples ou comme arguments de fonctions numériques,
 			  et favorisent l'écriture d'un code compact.
             </p>
-            [INSÉRER EXEMPLE CODE]
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Fonction définie en fin de script</span>
+<span class="token-txt">function</span> <span class="token-variable">moyenne</span> <span class="token-operator">=</span> <span class="token-variable">moyenneNotes</span>(<span class="token-variable">notes</span>)
+  <span class="token-variable">moyenne</span> <span class="token-operator">=</span> <span class="token-function">mean</span>(<span class="token-variable">notes</span>);
+<span class="token-txt">end</span>
+
+<span class="token-comment">% Fonction anonyme pour le carré</span>
+<span class="token-variable">carre</span> <span class="token-operator">=</span> <span class="token-operator">@</span>(<span class="token-variable">x</span>) <span class="token-variable">x</span> <span class="token-operator">.^</span> <span class="token-number">2</span>;
+<span class="token-variable">resultat</span> <span class="token-operator">=</span> <span class="token-variable">carre</span>(<span class="token-number">4</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
 			<p>
 			  À l'intérieur d'une fonction, les variables sont isolées du workspace principal : elles ne sont accessibles qu'au sein de cette fonction, et toute donnée externe doit
 			  être transmise explicitement en argument. Ce principe limite les effets de bord et améliore la lisibilité du code.
