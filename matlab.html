@@ -471,16 +471,15 @@
           <section class="section-block" id="operations">
             <h3>Opérations</h3>
             <p>
-              Les opérateurs arithmétiques standards sont l'addition
+			  Les <span class="accent-text">opérateurs arithmétiques</span> standards sont l'addition
               <span class="inline-snippet language-matlab"><code><span class="token-txt">+</span></code></span>, la soustraction
               <span class="inline-snippet language-matlab"><code><span class="token-txt">-</span></code></span>, la multiplication
               <span class="inline-snippet language-matlab"><code><span class="token-txt">*</span></code></span>, la division à droite
               <span class="inline-snippet language-matlab"><code><span class="token-txt">/</span></code></span> et la division à gauche
-              <span class="inline-snippet language-matlab"><code><span class="token-txt">\</span></code></span>. Lorsqu'ils sont
-              appliqués à des matrices, ils correspondent aux opérations matricielles classiques. Pour
-              effectuer des opérations élément par élément, il est nécessaire d'utiliser un point
-              <span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l'opérateur. Cette
-              notation indique que l'opération est appliquée indépendamment à chaque élément.
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">\</span></code></span>. Appliqués à des matrices,
+			  ils réalisent les opérations matricielles classiques. En revanche, pour effectuer des calculs élément par élément, il faut placer
+			  un point <span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l’opérateur : cette notation
+			  précise que l’opération est réalisée indépendamment sur chaque composant.
             </p>
             <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -491,7 +490,7 @@
 <span class="token-variable">produitMat</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">*</span> <span class="token-variable">B</span>;
 <span class="token-variable">produitElement</span> <span class="token-operator">=</span> <span class="token-variable">A</span> <span class="token-operator">.*</span> <span class="token-variable">B</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
-              Les opérateurs de comparaison sont l'égalité <span class="inline-snippet language-matlab"><code><span class="token-txt">==</span></code></span>, la non-égalité
+              Les <span class="accent-text">opérateurs de comparaison</span> sont l'égalité <span class="inline-snippet language-matlab"><code><span class="token-txt">= =</span></code></span>, la non-égalité
               <span class="inline-snippet language-matlab"><code><span class="token-txt">~=</span></code></span>, l'infériorité
               <span class="inline-snippet language-matlab"><code><span class="token-txt">&lt;</span></code></span> ou
               <span class="inline-snippet language-matlab"><code><span class="token-txt">&lt;=</span></code></span>, et la supériorité
