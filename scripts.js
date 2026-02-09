@@ -99,25 +99,48 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          return;
-        }
-        const match = sectionData.find(({ section }) => section === entry.target);
-        if (match) {
-          setActiveLink(match.link);
-        }
-      });
-    },
-    {
-      rootMargin: "-35% 0px -55% 0px",
-      threshold: 0.1,
-    }
-  );
+  const header = document.querySelector(".site-header");
+  const getScrollOffset = () => {
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    return headerHeight + 24;
+  };
 
-  sectionData.forEach(({ section }) => {
-    observer.observe(section);
-  });
+  const getSectionTop = (section) =>
+    section.getBoundingClientRect().top + window.scrollY;
+
+  const findActiveLink = () => {
+    const scrollPosition = window.scrollY + getScrollOffset();
+    let activeLink = sectionData[0]?.link;
+    sectionData.forEach(({ section, link }) => {
+      if (getSectionTop(section) <= scrollPosition) {
+        activeLink = link;
+      }
+    });
+    return activeLink;
+  };
+
+  const updateActiveLink = () => {
+    const activeLink = findActiveLink();
+    if (activeLink) {
+      setActiveLink(activeLink);
+    }
+  };
+
+  let isTicking = false;
+  const scheduleUpdate = () => {
+    if (isTicking) {
+      return;
+    }
+    isTicking = true;
+    window.requestAnimationFrame(() => {
+      updateActiveLink();
+      isTicking = false;
+    });
+  };
+
+  window.addEventListener("scroll", scheduleUpdate, { passive: true });
+  window.addEventListener("resize", scheduleUpdate);
+  window.addEventListener("hashchange", scheduleUpdate);
+  window.addEventListener("load", updateActiveLink);
+  updateActiveLink();
 });
