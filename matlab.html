@@ -731,8 +731,8 @@
                 <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
               </svg>
             </button><code><span class="token-comment">% Création d'une grille 2D</span>
-<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">3</span>:<span class="token-number">1</span>:<span class="token-number">3</span>;
-<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">3</span>:<span class="token-number">1</span>:<span class="token-number">3</span>;
+<span class="token-variable">x</span> <span class="token-operator">=</span> [<span class="token-number">-3</span> <span class="token-number">-2</span> <span class="token-number">-1</span> <span class="token-number">0</span> <span class="token-number">1</span> <span class="token-number">2</span> <span class="token-number">3</span>];
+<span class="token-variable">y</span> <span class="token-operator">=</span> [<span class="token-number">-3</span> <span class="token-number">-2</span> <span class="token-number">-1</span> <span class="token-number">0</span> <span class="token-number">1</span> <span class="token-number">2</span> <span class="token-number">3</span>];
 
 <span class="token-comment">% Valeurs de z sur la grille</span>
 [<span class="token-variable">X</span>, <span class="token-variable">Y</span>] <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
@@ -759,8 +759,8 @@
                 <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
               </svg>
             </button><code><span class="token-comment">% Création d'une grille 2D</span>
-<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">2</span>:<span class="token-number">0.5</span>:<span class="token-number">2</span>;
-<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">2</span>:<span class="token-number">0.5</span>:<span class="token-number">2</span>;
+<span class="token-variable">x</span> <span class="token-operator">=</span> [<span class="token-number">-2</span> <span class="token-number">-1.5</span> <span class="token-number">-1</span> <span class="token-number">-0.5</span> <span class="token-number">0</span> <span class="token-number">0.5</span> <span class="token-number">1</span> <span class="token-number">1.5</span> <span class="token-number">2</span>];
+<span class="token-variable">y</span> <span class="token-operator">=</span> [<span class="token-number">-2</span> <span class="token-number">-1.5</span> <span class="token-number">-1</span> <span class="token-number">-0.5</span> <span class="token-number">0</span> <span class="token-number">0.5</span> <span class="token-number">1</span> <span class="token-number">1.5</span> <span class="token-number">2</span>];
 [<span class="token-variable">X</span>, <span class="token-variable">Y</span>] <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
 
 <span class="token-comment">% Valeurs de z sur la grille</span>
@@ -791,12 +791,12 @@
                 <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
               </svg>
             </button><code><span class="token-comment">% Création des variables x, y1 et y2</span>
-<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-number">0</span>:<span class="token-number">0.5</span>:<span class="token-number">6</span>;
+<span class="token-variable">x</span> <span class="token-operator">=</span> [<span class="token-number">0</span> <span class="token-number">0.5</span> <span class="token-number">1</span> <span class="token-number">1.5</span> <span class="token-number">2</span> <span class="token-number">2.5</span> <span class="token-number">3</span> <span class="token-number">3.5</span> <span class="token-number">4</span> <span class="token-number">4.5</span> <span class="token-number">5</span> <span class="token-number">5.5</span> <span class="token-number">6</span>];
 <span class="token-variable">y1</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">x</span>);
 <span class="token-variable">y2</span> <span class="token-operator">=</span> <span class="token-function">cos</span>(<span class="token-variable">x</span>);
 
 <span class="token-comment">% Tracé des courbes y1(x) et y2(x) avec différents styles</span>
-<span class="token-function">plot</span>(<span class="token-variable">x</span>, <span class="token-variable">y1</span>, <span class="token-string">"--"</span>, <span class="token-variable">x</span>, <span class="token-variable">y2</span>, <span class="token-string">"-o"</span>, <span class="token-string">"LineWidth"</span>, <span class="token-number">1.5</span>);
+<span class="token-function">plot</span>(<span class="token-variable">x</span>, <span class="token-variable">y1</span>, <span class="token-string">"--"</span>, <span class="token-variable">x</span>, <span class="token-variable">y2</span>, <span class="token-string">"-o"</span>, <span class="token-string">"LineWidth"</span>, <span class="token-number">1.5</span>, <span class="token-string">"Color"</span>, [<span class="token-number">0.1</span> <span class="token-number">0.5</span> <span class="token-number">0.9</span>]);
 
 <span class="token-comment">% Ajout des labels, des titres etc.</span>
 <span class="token-function">xlabel</span>(<span class="token-string">"x"</span>);
