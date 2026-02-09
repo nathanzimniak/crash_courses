@@ -733,9 +733,9 @@
             </button><code><span class="token-comment">% Création d'une grille 2D</span>
 <span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">3</span>:<span class="token-number">1</span>:<span class="token-number">3</span>;
 <span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">3</span>:<span class="token-number">1</span>:<span class="token-number">3</span>;
-[<span class="token-variable">X</span>, <span class="token-variable">Y</span>] <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
 
 <span class="token-comment">% Valeurs de z sur la grille</span>
+[<span class="token-variable">X</span>, <span class="token-variable">Y</span>] <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
 <span class="token-variable">Z</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">X</span>)<span class="token-operator">.*</span><span class="token-function">cos</span>(<span class="token-variable">Y</span>);
 
 <span class="token-comment">% Création d'un carte de couleurs</span>
@@ -758,15 +758,16 @@
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
               </svg>
-            </button><code><span class="token-comment">% Grille pour une surface 3D</span>
+            </button><code><span class="token-comment">% Création d'une grille 2D</span>
 <span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">2</span>:<span class="token-number">0.5</span>:<span class="token-number">2</span>;
 <span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-operator">-</span><span class="token-number">2</span>:<span class="token-number">0.5</span>:<span class="token-number">2</span>;
 [<span class="token-variable">X</span>, <span class="token-variable">Y</span>] <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
-<span class="token-comment">% Surface en cloche</span>
+
+<span class="token-comment">% Valeurs de z sur la grille</span>
 <span class="token-variable">Z</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">X</span>) <span class="token-operator">.*</span> <span class="token-function">cos</span>(<span class="token-variable">Y</span>);
-<span class="token-comment">% Tracé 3D</span>
-<span class="token-function">surf</span>(<span class="token-variable">X</span>, <span class="token-variable">Y</span>, <span class="token-variable">Z</span>);
-<span class="token-function">colorbar</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+
+<span class="token-comment">% Tracé de la courbe z(x,y)</span>
+<span class="token-function">surf</span>(<span class="token-variable">X</span>, <span class="token-variable">Y</span>, <span class="token-variable">Z</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
 			  Enfin, MATLAB permet un contrôle fin de l'apparence des graphiques grâce à de nombreux paramètres graphiques. Lors de l'appel aux fonctions de tracé, il est possible
 			  de spécifier directement des propriétés telles que
@@ -789,19 +790,22 @@
               <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
                 <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
               </svg>
-            </button><code><span class="token-comment">% Deux séries à comparer</span>
+            </button><code><span class="token-comment">% Création des variables x, y1 et y2</span>
 <span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-number">0</span>:<span class="token-number">0.5</span>:<span class="token-number">6</span>;
 <span class="token-variable">y1</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">x</span>);
 <span class="token-variable">y2</span> <span class="token-operator">=</span> <span class="token-function">cos</span>(<span class="token-variable">x</span>);
-<span class="token-comment">% Style des courbes</span>
+
+<span class="token-comment">% Tracé des courbes y1(x) et y2(x) avec différents styles</span>
 <span class="token-function">plot</span>(<span class="token-variable">x</span>, <span class="token-variable">y1</span>, <span class="token-string">"--"</span>, <span class="token-variable">x</span>, <span class="token-variable">y2</span>, <span class="token-string">"-o"</span>, <span class="token-string">"LineWidth"</span>, <span class="token-number">1.5</span>);
-<span class="token-comment">% Habillage</span>
+
+<span class="token-comment">% Ajout des labels, des titres etc.</span>
 <span class="token-function">xlabel</span>(<span class="token-string">"x"</span>);
 <span class="token-function">ylabel</span>(<span class="token-string">"Amplitude"</span>);
 <span class="token-function">title</span>(<span class="token-string">"Comparaison des signaux"</span>);
 <span class="token-function">legend</span>(<span class="token-string">"sin"</span>, <span class="token-string">"cos"</span>, <span class="token-string">"Location"</span>, <span class="token-string">"best"</span>);
 <span class="token-txt">grid on</span>
-<span class="token-function">xlim</span>([<span class="token-number">0</span> <span class="token-number">6</span>]);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+<span class="token-function">xlim</span>([<span class="token-number">0</span> <span class="token-number">6</span>]);
+<span class="token-function">ylim</span>([<span class="token-number">-1</span> <span class="token-number">1</span>]);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="gestion-erreurs">
