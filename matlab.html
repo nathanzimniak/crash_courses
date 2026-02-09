@@ -682,18 +682,152 @@
           <h2>Notions intermédiaires</h2>
           <section class="section-block" id="visualisation">
             <h3>Visualisation</h3>
+            <p>
+              La visualisation est un axe majeur de MATLAB : l'environnement intègre un moteur graphique
+              complet et des fonctions natives dédiées, ce qui facilite l'exploration rapide de résultats
+              numériques et la validation d'hypothèses. Les fonctions graphiques produisent des figures
+              interactives et exploitent un modèle de rendu cohérent basé sur des objets (axes, courbes, surfaces).
+            </p>
+            <p>
+              <span class="accent-text">Plots 1D</span> : un plot 1D représente une variable <span class="accent-text">y</span> en fonction d'une
+              abscisse <span class="accent-text">x</span>. La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">plot(x, y)</span></code></span> trace une courbe
+              cartésienne classique.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Plot 1D : y en fonction de x</span>
+<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">0</span>, <span class="token-number">2</span><span class="token-operator">*</span><span class="token-variable">pi</span>, <span class="token-number">200</span>);
+<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">x</span>);
+<span class="token-function">plot</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+            <p>
+              <span class="accent-text">Plots 2D</span> : un plot 2D représente <span class="accent-text">x</span> et <span class="accent-text">y</span> dans un plan, avec une
+              valeur <span class="accent-text">z</span> codée par une échelle de couleur. Les fonctions comme
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">scatter</span></code></span> ou <span class="inline-snippet language-matlab"><code><span class="token-txt">imagesc</span></code></span> permettent d'associer
+              une colorbar aux valeurs de <span class="accent-text">z</span>.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Plot 2D : z codé par la couleur</span>
+<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">-2</span>, <span class="token-number">2</span>, <span class="token-number">80</span>);
+<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">-2</span>, <span class="token-number">2</span>, <span class="token-number">80</span>);
+<span class="token-operator">[</span><span class="token-variable">X</span><span class="token-operator">,</span> <span class="token-variable">Y</span><span class="token-operator">]</span> <span class="token-operator">=</span> <span class="token-function">meshgrid</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>);
+<span class="token-variable">Z</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">X</span>) <span class="token-operator">.*</span> <span class="token-function">cos</span>(<span class="token-variable">Y</span>);
+<span class="token-function">imagesc</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>, <span class="token-variable">Z</span>);
+<span class="token-function">axis</span>(<span class="token-string">"xy"</span>);
+<span class="token-function">colorbar</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+            <p>
+              <span class="accent-text">Plots 3D</span> : un plot 3D correspond à un triplet <span class="accent-text">x, y, z</span> et
+              représente une trajectoire dans l'espace. La fonction
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">plot3</span></code></span> est dédiée à ce type de visualisation.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Plot 3D : trajectoire hélicoïdale</span>
+<span class="token-variable">t</span> <span class="token-operator">=</span> <span class="token-function">linspace</span>(<span class="token-number">0</span>, <span class="token-number">4</span><span class="token-operator">*</span><span class="token-variable">pi</span>, <span class="token-number">200</span>);
+<span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-function">cos</span>(<span class="token-variable">t</span>);
+<span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">sin</span>(<span class="token-variable">t</span>);
+<span class="token-variable">z</span> <span class="token-operator">=</span> <span class="token-variable">t</span> <span class="token-operator">/</span> (<span class="token-number">2</span><span class="token-operator">*</span><span class="token-variable">pi</span>);
+<span class="token-function">plot3</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>, <span class="token-variable">z</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+            <p>
+              <span class="accent-text">Paramètres des plots</span> : la plupart des fonctions acceptent des paires
+              nom-valeur pour configurer le rendu. Les paramètres comme <span class="inline-snippet language-matlab"><code><span class="token-txt">LineWidth</span></code></span>,
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">LineStyle</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">Marker</span></code></span>
+              et <span class="inline-snippet language-matlab"><code><span class="token-txt">Color</span></code></span> contrôlent l'apparence des courbes. Les fonctions
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">title</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">xlabel</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">ylabel</span></code></span>,
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">legend</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">grid on</span></code></span> et
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">axis</span></code></span> structurent le graphique et la lecture des valeurs.
+            </p>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="gestion-erreurs">
             <h3>Gestion des erreurs</h3>
+            <p>
+              MATLAB distingue les erreurs bloquantes des avertissements. La fonction
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">error</span></code></span> interrompt immédiatement l'exécution, tandis que
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">warning</span></code></span> signale une situation anormale sans arrêter le script.
+              Pour capturer une erreur et poursuivre l'exécution de manière contrôlée, on utilise un bloc
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">try ... catch</span></code></span>. L'objet <span class="inline-snippet language-matlab"><code><span class="token-txt">MException</span></code></span>
+              associé fournit un identifiant et un message détaillé, utiles pour diagnostiquer l'échec ou
+              relancer l'erreur avec <span class="inline-snippet language-matlab"><code><span class="token-txt">rethrow</span></code></span>.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-txt">try</span>
+  <span class="token-variable">data</span> <span class="token-operator">=</span> <span class="token-function">readmatrix</span>(<span class="token-string">"donnees.csv"</span>);
+  <span class="token-function">assert</span>(<span class="token-operator">~</span><span class="token-function">isempty</span>(<span class="token-variable">data</span>), <span class="token-string">"Le fichier est vide."</span>);
+<span class="token-txt">catch</span> <span class="token-variable">ME</span>
+  <span class="token-function">warning</span>(<span class="token-string">"Chargement impossible (%s): %s"</span>, <span class="token-variable">ME</span>.<span class="token-variable">identifier</span>, <span class="token-variable">ME</span>.<span class="token-variable">message</span>);
+  <span class="token-variable">data</span> <span class="token-operator">=</span> [];
+<span class="token-txt">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="manipulation-fichiers">
             <h3>Manipulation de fichiers</h3>
+            <p>
+              MATLAB fournit des fonctions de haut niveau pour lire et écrire des données structurées, et des
+              primitives bas niveau pour contrôler précisément les flux. Les fonctions
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">readmatrix</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">readtable</span></code></span>,
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">writematrix</span></code></span> et <span class="inline-snippet language-matlab"><code><span class="token-txt">writetable</span></code></span> gèrent les fichiers texte
+              (CSV, TSV) de façon robuste. Pour des formats personnalisés, le couple
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">fopen</span></code></span>/<span class="inline-snippet language-matlab"><code><span class="token-txt">fclose</span></code></span> ouvre et ferme un flux,
+              tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">fprintf</span></code></span> et <span class="inline-snippet language-matlab"><code><span class="token-txt">fscanf</span></code></span> écrivent et lisent des données formatées.
+              La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">fullfile</span></code></span> est recommandée pour construire des chemins
+              compatibles avec tous les systèmes d'exploitation.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Écriture puis relecture d'un fichier CSV</span>
+<span class="token-variable">chemin</span> <span class="token-operator">=</span> <span class="token-function">fullfile</span>(<span class="token-function">pwd</span>, <span class="token-string">"exports"</span>);
+<span class="token-txt">if</span> <span class="token-operator">~</span><span class="token-function">isfolder</span>(<span class="token-variable">chemin</span>)
+  <span class="token-function">mkdir</span>(<span class="token-variable">chemin</span>);
+<span class="token-txt">end</span>
+<span class="token-variable">donnees</span> <span class="token-operator">=</span> <span class="token-function">rand</span>(<span class="token-number">5</span>, <span class="token-number">3</span>);
+<span class="token-variable">fichier</span> <span class="token-operator">=</span> <span class="token-function">fullfile</span>(<span class="token-variable">chemin</span>, <span class="token-string">"mesures.csv"</span>);
+<span class="token-function">writematrix</span>(<span class="token-variable">donnees</span>, <span class="token-variable">fichier</span>);
+<span class="token-variable">donnees_lues</span> <span class="token-operator">=</span> <span class="token-function">readmatrix</span>(<span class="token-variable">fichier</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="programmation-objet">
             <h3>Programmation orientée objet</h3>
+            <p>
+              MATLAB supporte la programmation orientée objet via la directive
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">classdef</span></code></span>. Une classe regroupe des <span class="accent-text">propriétés</span>
+              (état interne) et des <span class="accent-text">méthodes</span> (comportements). Par défaut, les objets sont des types
+              valeur : une affectation crée une copie indépendante. Les classes dérivées de
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">handle</span></code></span> utilisent des références, ce qui permet de partager un même objet entre plusieurs variables.
+              La définition des classes doit être claire et concise, avec des propriétés initialisées dans le
+              constructeur et des méthodes courtes focalisées sur une responsabilité.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Définition d'une classe simple avec constructeur</span>
+<span class="token-txt">classdef</span> <span class="token-variable">Point2D</span>
+  <span class="token-txt">properties</span>
+    <span class="token-variable">X</span> <span class="token-variable">double</span>
+    <span class="token-variable">Y</span> <span class="token-variable">double</span>
+  <span class="token-txt">end</span>
+  <span class="token-txt">methods</span>
+    <span class="token-txt">function</span> <span class="token-variable">obj</span> <span class="token-operator">=</span> <span class="token-variable">Point2D</span>(<span class="token-variable">x</span>, <span class="token-variable">y</span>)
+      <span class="token-variable">obj</span>.<span class="token-variable">X</span> <span class="token-operator">=</span> <span class="token-variable">x</span>;
+      <span class="token-variable">obj</span>.<span class="token-variable">Y</span> <span class="token-operator">=</span> <span class="token-variable">y</span>;
+    <span class="token-txt">end</span>
+    <span class="token-txt">function</span> <span class="token-variable">d</span> <span class="token-operator">=</span> <span class="token-variable">distanceToOrigin</span>(<span class="token-variable">obj</span>)
+      <span class="token-variable">d</span> <span class="token-operator">=</span> <span class="token-function">hypot</span>(<span class="token-variable">obj</span>.<span class="token-variable">X</span>, <span class="token-variable">obj</span>.<span class="token-variable">Y</span>);
+    <span class="token-txt">end</span>
+  <span class="token-txt">end</span>
+<span class="token-txt">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
         </section>
 
