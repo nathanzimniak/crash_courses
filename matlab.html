@@ -271,7 +271,7 @@
               </svg>
             </button><code><span class="token-comment">% Création d'une variable</span>
 <span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-number">42</span>;
-<span class="token-function">class</span>(<span class="token-variable">x</span>) <span class="token-comment">% x est un entier</span>
+<span class="token-function">class</span>(<span class="token-variable">x</span>) <span class="token-comment">% x est un double</span>
 				
 <span class="token-variable">x</span> <span class="token-operator">=</span> <span class="token-string">"Bonjour"</span>;
 <span class="token-function">class</span>(<span class="token-variable">x</span>) <span class="token-comment">% x est devenue une chaîne de caractères</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
@@ -289,7 +289,7 @@
             </button><code><span class="token-comment">% Création de plusieurs variables respectant les règles de nommage</span>
 <span class="token-variable">vitesse_moy</span> <span class="token-operator">=</span> <span class="token-number">5.2</span>;
 <span class="token-variable">nbEssais</span> <span class="token-operator">=</span> <span class="token-number">3</span>;
-<span class="token-variable">theta_0</span> <span class="token-operator">=</span> <span class="token-number">0.785</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+<span class="token-variable">theta0</span> <span class="token-operator">=</span> <span class="token-number">0.785</span>;</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Toutes les variables créées durant une session sont stockées dans l'espace mémoire courant, appelé
               <span class="accent-text">workspace</span>. Le workspace permet d'inspecter interactivement les valeurs, dimensions et types des
@@ -308,6 +308,19 @@
           <section class="section-block" id="types-primitifs">
             <h3>Types primitifs</h3>
             <p>
+			  Par défaut, toutes les valeurs numériques créées dans MATLAB sont de type <span class="accent-text">double</span>, c’est-à-dire des nombres à virgule flottante en double précision.
+				MATLAB propose également le type <span class="accent-text">single</span> (simple précision), mais celui-ci doit être explicitement spécifié.
+				Le type double est utilisé dans la grande majorité des calculs scientifiques en raison de sa précision élevée et de sa compatibilité avec l’ensemble des fonctions intégrées à MATLAB.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-comment">% Création d'une variable de type double</span>
+<span class="token-variable">a</span> <span class="token-operator">=</span> <span class="token-number">3.14</span>;
+<span class="token-comment">% Création d'une variable de type simple</span>
+<span class="token-variable">b</span> <span class="token-operator">=</span> <span class="token-function">single</span>(<span class="token-number">3.14</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+            <p>
               MATLAB supporte plusieurs types entiers signés et non signés, tels que int8, int16, int32, int64,
               ainsi que leurs équivalents non signés uint8, uint16, uint32 et uint64. Contrairement aux doubles,
               ces types doivent être explicitement spécifiés. Les entiers sont principalement utilisés lorsque la
@@ -320,21 +333,6 @@
               </svg>
             </button><code><span class="token-variable">pixel</span> <span class="token-operator">=</span> <span class="token-function">uint8</span>(<span class="token-number">255</span>);
 <span class="token-variable">compteur</span> <span class="token-operator">=</span> <span class="token-function">int16</span>(<span class="token-number">-120</span>);</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
-            <p>
-              Par défaut, toutes les valeurs numériques créées dans MATLAB sont de type double, c'est-à-dire des
-              nombres à virgule flottante en double précision conformes au standard IEEE 754. MATLAB propose
-              également le type single (simple précision), mais celui-ci doit être explicitement demandé. Le type
-              double est utilisé dans la grande majorité des calculs scientifiques en raison de sa précision et
-              de sa compatibilité avec les fonctions intégrées.
-            </p>
-            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
-              </svg>
-            </button><code><span class="token-variable">a</span> <span class="token-operator">=</span> <span class="token-number">3.14</span>;
-<span class="token-variable">b</span> <span class="token-operator">=</span> <span class="token-function">single</span>(<span class="token-number">3.14</span>);
-<span class="token-function">class</span>(<span class="token-variable">a</span>)
-<span class="token-function">class</span>(<span class="token-variable">b</span>)</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Les valeurs logiques sont représentées par le type logical, qui ne peut prendre que deux valeurs :
               <span class="inline-snippet language-matlab"><code><span class="token-txt">true</span></code></span> ou
