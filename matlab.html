@@ -374,8 +374,8 @@
             <h3>Structures de données</h3>
             <p>
               La structure de données fondamentale de MATLAB est la <span class="accent-text">matrice</span>. Toute donnée numérique est
-              représentée sous forme matricielle. Un vecteur ligne est une matrice de taille 1×N, tandis qu'un vecteur colonne est une matrice de taille
-              N×1. Les scalaires eux-mêmes sont représentés comme des matrices 1×1. Cette unification permet d'appliquer les mêmes
+              représentée sous forme matricielle. Un vecteur ligne est une matrice de taille 1xN, tandis qu'un vecteur colonne est une matrice de taille
+              Nx1. Les scalaires eux-mêmes sont représentés comme des matrices 1x1. Cette unification permet d'appliquer les mêmes
               opérations matricielles aux scalaires, vecteurs et matrices, ce qui constitue un principe
               fondamental du langage. Une matrice se crée à l'aide de crochets
 			  <span class="inline-snippet language-matlab"><code><span class="token-txt">[</span></code></span> <span class="inline-snippet language-matlab"><code><span class="token-txt">]</span></code></span>,
@@ -393,7 +393,10 @@
 <span class="token-variable">vectLigne</span> <span class="token-operator">=</span> [<span class="token-number">1</span> <span class="token-number">2</span> <span class="token-number">3</span>];
 
 <span class="token-comment">% Création d'une matrice de taille 3x1 (vecteur colonne)</span>
-<span class="token-variable">vectCol</span> <span class="token-operator">=</span> [<span class="token-number">1</span>; <span class="token-number">2</span>; <span class="token-number">3</span>];</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
+<span class="token-variable">vectCol</span> <span class="token-operator">=</span> [<span class="token-number">1</span>; <span class="token-number">2</span>; <span class="token-number">3</span>];</code>
+<span 
+	class="token-comment">% Création d'une matrice de taille 1x1 (scalaire)</span>
+<span class="token-variable">scal</span> <span class="token-operator">=</span> [<span class="token-number">1</span>; <span class="token-number">2</span>; <span class="token-number">3</span>];</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
             <p>
               Les cell arrays permettent de stocker des éléments de types différents dans une même structure.
               Chaque cellule peut contenir une valeur arbitraire, comme un nombre, une chaîne de caractères, une
