@@ -360,12 +360,16 @@ pre {
   overflow-x: auto;
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
   font-size: 0.95rem;
 }
 
 code {
   font-family: "JetBrains Mono", "SFMono-Regular", "Menlo", "Monaco", "Consolas",
     "Liberation Mono", "Courier New", monospace;
+  font-variant-ligatures: none;
+  font-feature-settings: "liga" 0, "calt" 0;
   font-size: 0.85em;
 }
 
