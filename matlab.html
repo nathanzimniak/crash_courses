@@ -478,8 +478,8 @@
               <span class="inline-snippet language-matlab"><code><span class="token-txt">/</span></code></span> et la division à gauche
               <span class="inline-snippet language-matlab"><code><span class="token-txt">\</span></code></span>. Appliqués à des matrices,
 			  ils réalisent les opérations matricielles classiques. En revanche, pour effectuer des calculs élément par élément, il faut placer
-			  un point <span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l’opérateur : cette notation
-			  précise que l’opération est réalisée indépendamment sur chaque composant.
+			  un point <span class="inline-snippet language-matlab"><code><span class="token-txt">.</span></code></span> devant l'opérateur : cette notation
+			  précise que l'opération est réalisée indépendamment sur chaque composant.
             </p>
 			[INSÉRER EXEMPLE CODE]
             <p>
@@ -513,17 +513,17 @@
               <span class="inline-snippet language-matlab"><code><span class="token-txt">if … elseif … else … end</span></code></span>.
               La condition évaluée doit produire une valeur logique. Lorsque la condition est vraie, le bloc
               correspondant est exécuté, sinon MATLAB passe au test suivant.
- 			  Pour des tests simples portant sur une même variable, notamment lorsque l’on compare plusieurs valeurs possibles, il est souvent plus lisible d’utiliser la structure
+ 			  Pour des tests simples portant sur une même variable, notamment lorsque l'on compare plusieurs valeurs possibles, il est souvent plus lisible d'utiliser la structure
   			  <span class="inline-snippet language-matlab"><code><span class="token-txt">switch … case … otherwise</span></code></span>.
   			  Chaque <span class="inline-snippet language-matlab"><code><span class="token-txt">case</span></code></span> correspond à une valeur spécifique,
 			  tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">otherwise</span></code></span> joue le rôle de cas par défaut.
             </p>
 			[INSÉRER EXEMPLE CODE]
             <p>
-			  On distingue également les <span class="accent-text">boucles</span>, qui permettent de répéter un bloc d’instructions soit pour un nombre fixé d’itérations, soit tant
-			  qu’une condition logique est vérifiée. La structure <span class="inline-snippet language-matlab"><code><span class="token-txt">for</span></code></span> est employée lorsque
-			  le nombre d’itérations est connu à l’avance, tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">while</span></code></span> est utilisée
-			  lorsque la répétition dépend d’une condition. MATLAB fournit également les instructions
+			  On distingue également les <span class="accent-text">boucles</span>, qui permettent de répéter un bloc d'instructions soit pour un nombre fixé d'itérations, soit tant
+			  qu'une condition logique est vérifiée. La structure <span class="inline-snippet language-matlab"><code><span class="token-txt">for</span></code></span> est employée lorsque
+			  le nombre d'itérations est connu à l'avance, tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">while</span></code></span> est utilisée
+			  lorsque la répétition dépend d'une condition. MATLAB fournit également les instructions
               <span class="inline-snippet language-matlab"><code><span class="token-txt">break</span></code></span> et
               <span class="inline-snippet language-matlab"><code><span class="token-txt">continue</span></code></span>, qui permettent
               respectivement d'interrompre une boucle ou de passer directement à l'itération suivante.
@@ -542,50 +542,28 @@
           <section class="section-block" id="fonctions">
             <h3>Fonctions</h3>
             <p>
-              Une fonction est définie dans un fichier distinct portant le même nom que la fonction, soit, depuis
-              les versions récentes de MATLAB, à la fin d'un script, à l'aide du mot-clé function. Lorsqu'une
-              fonction est placée dans son propre fichier, elle est accessible depuis n'importe quel script ou
-              fonction du projet, à condition que le fichier soit dans le chemin MATLAB. En revanche, une
-              fonction définie à la fin d'un script est une fonction locale : elle n'est visible que dans ce
-              fichier et sert principalement à structurer le code sans créer de fichiers supplémentaires.
+              Une <span class="accent-text">fonction</span> est définie à l'aide du mot-clé function, soit dans un fichier distinct portant le même nom que la fonction,
+		      soit à la fin d'un script (dans les versions récentes de MATLAB). Lorsqu'elle est placée dans son propre fichier, elle est accessible depuis l'ensemble du projet,
+			  à condition que ce fichier se trouve dans le chemin MATLAB. À l'inverse, une fonction définie à la fin d'un script n'est visible que dans ce fichier et sert
+			  principalement à structurer le code sans créer de fichiers supplémentaires. MATLAB permet également de créer des <span class="accent-text">fonctions anonymes</span>,
+			  qui définissent rapidement de petites fonctions sans fichier séparé. Elles sont particulièrement utiles pour des calculs simples ou comme arguments de fonctions numériques,
+			  et favorisent l'écriture d'un code compact.
             </p>
-            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
-              </svg>
-            </button><code><span class="token-keyword">function</span> <span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-function">carre</span>(<span class="token-variable">x</span>)
-  <span class="token-variable">y</span> <span class="token-operator">=</span> <span class="token-variable">x</span> <span class="token-operator">.*</span> <span class="token-variable">x</span>;
-<span class="token-keyword">end</span></code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
-            <p>
-              Par défaut, les variables définies à l'intérieur d'une fonction sont locales à cette fonction.
-              Elles ne sont pas accessibles depuis le workspace principal ni depuis d'autres fonctions.
-              Inversement, une fonction ne peut pas accéder directement aux variables du workspace, sauf si
-              celles-ci sont passées explicitement en argument. Ce mécanisme garantit l'isolation des traitements
-              et limite les effets de bord.
+            [INSÉRER EXEMPLE CODE]
+			<p>
+			  À l'intérieur d'une fonction, les variables sont isolées du workspace principal : elles ne sont accessibles qu'au sein de cette fonction, et toute donnée externe doit
+			  être transmise explicitement en argument. Ce principe limite les effets de bord et améliore la lisibilité du code.
             </p>
             <p>
-              MATLAB fournit un large ensemble de fonctions intégrées couvrant notamment le calcul numérique,
-              l'algèbre linéaire, la manipulation de matrices et la visualisation, par exemple
+			  Enfin, MATLAB fournit un large ensemble de fonctions intégrées (<span class="accent-text">built-in</span>) pour le calcul numérique, l'algèbre linéaire, la manipulation de matrices et la visualisation,
+			  telles que
               <span class="inline-snippet language-matlab"><code><span class="token-txt">sin()</span></code></span>,
               <span class="inline-snippet language-matlab"><code><span class="token-txt">cos()</span></code></span>,
               <span class="inline-snippet language-matlab"><code><span class="token-txt">mean()</span></code></span>,
               <span class="inline-snippet language-matlab"><code><span class="token-txt">size()</span></code></span>,
-              <span class="inline-snippet language-matlab"><code><span class="token-txt">plot()</span></code></span> … Ces fonctions sont
-              disponibles immédiatement après l'installation du logiciel et ne nécessitent aucune toolbox
-              supplémentaire.
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">plot()</span></code></span> etc.
+			  Ces fonctions sont disponibles immédiatement après l'installation du logiciel, sans nécessiter de toolbox supplémentaire.
             </p>
-            <p>
-              Il existe également des fonctions dites anonymes, qui permettent de définir rapidement de petites
-              fonctions sans créer de fichier séparé. Elles sont particulièrement utiles pour des calculs simples
-              ou comme arguments de fonctions numériques. Les fonctions anonymes facilitent l'écriture de code
-              compact
-            </p>
-            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
-              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
-              </svg>
-            </button><code><span class="token-variable">f</span> <span class="token-operator">=</span> <span class="token-operator">@</span>(<span class="token-variable">t</span>) <span class="token-variable">t</span> <span class="token-operator">.^</span> <span class="token-number">2</span> <span class="token-operator">+</span> <span class="token-number">1</span>;
-<span class="token-variable">f</span>(<span class="token-number">3</span>)</code><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/></svg></button></pre>
           </section>
 
           <div class="section-spacing" aria-hidden="true"></div>
