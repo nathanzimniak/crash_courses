@@ -682,18 +682,114 @@
           <h2>Notions intermédiaires</h2>
           <section class="section-block" id="visualisation">
             <h3>Visualisation</h3>
+            <p>
+              La visualisation est un pilier de MATLAB : elle permet d'analyser rapidement des résultats
+              numériques et de valider des hypothèses. La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">plot</span></code></span> crée une courbe 2D,
+              tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">figure</span></code></span> ouvre une nouvelle fenêtre graphique. Les annotations
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">title</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">xlabel</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">ylabel</span></code></span> et <span class="inline-snippet language-matlab"><code><span class="token-txt">legend</span></code></span>
+              documentent le graphique et facilitent l'interprétation des données. La commande
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">hold on</span></code></span> superpose plusieurs tracés, tandis que
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">grid on</span></code></span> améliore la lisibilité.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-txt">t = 0:0.01:2*pi;</span>
+<span class="token-txt">y1 = sin(t);</span>
+<span class="token-txt">y2 = cos(t);</span>
+<span class="token-txt">figure;</span>
+<span class="token-txt">plot(t, y1, "LineWidth", 1.5);</span>
+<span class="token-txt">hold on;</span>
+<span class="token-txt">plot(t, y2, "--", "LineWidth", 1.5);</span>
+<span class="token-txt">grid on;</span>
+<span class="token-txt">xlabel("t (rad)");</span>
+<span class="token-txt">ylabel("Amplitude");</span>
+<span class="token-txt">title("Sinus et cosinus");</span>
+<span class="token-txt">legend("sin(t)", "cos(t)", "Location", "best");</span></code></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="gestion-erreurs">
             <h3>Gestion des erreurs</h3>
+            <p>
+              MATLAB distingue les erreurs bloquantes des avertissements. La fonction
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">error</span></code></span> interrompt immédiatement l'exécution, tandis que
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">warning</span></code></span> signale une situation anormale sans arrêter le script.
+              Pour capturer une erreur et poursuivre l'exécution de manière contrôlée, on utilise un bloc
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">try ... catch</span></code></span>. L'objet <span class="inline-snippet language-matlab"><code><span class="token-txt">MException</span></code></span>
+              associé fournit un identifiant et un message détaillé, utiles pour diagnostiquer l'échec ou
+              relancer l'erreur avec <span class="inline-snippet language-matlab"><code><span class="token-txt">rethrow</span></code></span>.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-txt">try</span>
+<span class="token-txt">    data = readmatrix("donnees.csv");</span>
+<span class="token-txt">    assert(~isempty(data), "Le fichier est vide.");</span>
+<span class="token-txt">catch ME</span>
+<span class="token-txt">    warning("Chargement impossible (%s): %s", ME.identifier, ME.message);</span>
+<span class="token-txt">    data = [];</span>
+<span class="token-txt">end</span></code></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="manipulation-fichiers">
             <h3>Manipulation de fichiers</h3>
+            <p>
+              MATLAB fournit des fonctions de haut niveau pour lire et écrire des données structurées, et des
+              primitives bas niveau pour contrôler précisément les flux. Les fonctions
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">readmatrix</span></code></span>, <span class="inline-snippet language-matlab"><code><span class="token-txt">readtable</span></code></span>,
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">writematrix</span></code></span> et <span class="inline-snippet language-matlab"><code><span class="token-txt">writetable</span></code></span> gèrent les fichiers texte
+              (CSV, TSV) de façon robuste. Pour des formats personnalisés, le couple
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">fopen</span></code></span>/<span class="inline-snippet language-matlab"><code><span class="token-txt">fclose</span></code></span> ouvre et ferme un flux,
+              tandis que <span class="inline-snippet language-matlab"><code><span class="token-txt">fprintf</span></code></span> et <span class="inline-snippet language-matlab"><code><span class="token-txt">fscanf</span></code></span> écrivent et lisent des données formatées.
+              La fonction <span class="inline-snippet language-matlab"><code><span class="token-txt">fullfile</span></code></span> est recommandée pour construire des chemins
+              compatibles avec tous les systèmes d'exploitation.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-txt">chemin = fullfile(pwd, "exports");</span>
+<span class="token-txt">if ~isfolder(chemin)</span>
+<span class="token-txt">    mkdir(chemin);</span>
+<span class="token-txt">end</span>
+<span class="token-txt">donnees = rand(5, 3);</span>
+<span class="token-txt">fichier = fullfile(chemin, "mesures.csv");</span>
+<span class="token-txt">writematrix(donnees, fichier);</span>
+<span class="token-txt">donnees_lues = readmatrix(fichier);</span></code></pre>
           </section>
           <div class="section-spacing" aria-hidden="true"></div>
           <section class="section-block" id="programmation-objet">
             <h3>Programmation orientée objet</h3>
+            <p>
+              MATLAB supporte la programmation orientée objet via la directive
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">classdef</span></code></span>. Une classe regroupe des <span class="accent-text">propriétés</span>
+              (état interne) et des <span class="accent-text">méthodes</span> (comportements). Par défaut, les objets sont des types
+              valeur : une affectation crée une copie indépendante. Les classes dérivées de
+              <span class="inline-snippet language-matlab"><code><span class="token-txt">handle</span></code></span> utilisent des références, ce qui permet de partager un même objet entre plusieurs variables.
+              La définition des classes doit être claire et concise, avec des propriétés initialisées dans le
+              constructeur et des méthodes courtes focalisées sur une responsabilité.
+            </p>
+            <pre class="code-block language-matlab"><button class="copy-button" type="button" aria-label="Copier le snippet" data-default-label="Copier le snippet" data-copied-label="Copié !">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path fill="currentColor" d="M16 1H4a2 2 0 0 0-2 2v12h2V3h12V1zm4 4H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2zm0 16H8V7h12v14z"/>
+              </svg>
+            </button><code><span class="token-txt">classdef Point2D</span>
+<span class="token-txt">    properties</span>
+<span class="token-txt">        X double</span>
+<span class="token-txt">        Y double</span>
+<span class="token-txt">    end</span>
+<span class="token-txt">    methods</span>
+<span class="token-txt">        function obj = Point2D(x, y)</span>
+<span class="token-txt">            obj.X = x;</span>
+<span class="token-txt">            obj.Y = y;</span>
+<span class="token-txt">        end</span>
+<span class="token-txt">        function d = distanceToOrigin(obj)</span>
+<span class="token-txt">            d = hypot(obj.X, obj.Y);</span>
+<span class="token-txt">        end</span>
+<span class="token-txt">    end</span>
+<span class="token-txt">end</span></code></pre>
           </section>
         </section>
 
