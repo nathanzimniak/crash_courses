@@ -349,10 +349,6 @@ a:hover {
   text-align: justify;
 }
 
-.content p:last-child {
-  margin-bottom: 0;
-}
-
 pre {
   margin: 1rem 0rem;
   padding: 0;
